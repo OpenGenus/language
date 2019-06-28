@@ -1,0 +1,55 @@
+<pre lang="cpp">
+  #include <iostream>
+  using namespace std;
+
+  int main ()
+  {
+    cout << "Hello World!";
+    return 0;
+  }
+  </pre>
+
+<pre lang="Swift">
+@objc func handleTap(sender: UITapGestureRecognizer) {
+    if let tappedSceneView = sender.view as? ARSCNView {
+        let tapLocationInView = sender.location(in: tappedSceneView)
+        let planeHitTest = tappedSceneView.hitTest(tapLocationInView,
+            types: .existingPlaneUsingExtent)
+        if !planeHitTest.isEmpty {
+            addFurniture(hitTest: planeHitTest)
+        }
+    }
+}</pre>
+
+<pre lang="Java">
+import java.applet.*;
+import java.awt.*;
+
+public class Main extends Applet{
+   public void paint(Graphics g){
+      g.drawString("Welcome in Java Applet.",40,20);
+   }
+}</pre>
+
+<pre lang="JavaScript">
+var my_dataset = [
+   {
+       id: "1",
+       text: "Chairman & CEO",
+       title: "Henry Bennett"
+   },
+   {
+       id: "2",
+       text: "Manager",
+       title: "Mildred Kim"
+   },
+   {
+       id: "3",
+       text: "Technical Director",
+       title: "Jerry Wagner"
+   },
+   { id: "1-2", from: "1", to: "2", type: "line" },
+   { id: "1-3", from: "1", to: "3", type: "line" }
+];</pre>
+
+
