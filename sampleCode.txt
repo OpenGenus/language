@@ -52,4 +52,284 @@ var my_dataset = [
    { id: "1-3", from: "1", to: "3", type: "line" }
 ];</pre>
 
+<pre lang="cpp">    #include <iostream>
+     
+    using namespace std;
+     
+    int main()
+    {
+       int a, b, c;
+       
+       cout << "Enter two integers to add\n";
+       cin >> a >> b;
+     
+       c = a + b;
+       cout <<"Sum of the numbers: " << c << endl;
+       
+       return 0;
+    }</pre>
 
+<pre lang="Java">    class Integers {
+      public static void main(String[] arguments) {
+        int c; //declaring a variable
+     
+      /* Using for loop to repeat instruction execution */
+     
+        for (c = 1; c <= 10; c++) {
+          System.out.println(c);
+        }
+      }
+    }</pre>
+
+<pre lang="JavaScript">function myFunction() {
+  var str = "Hello Coder!";
+  var res = str.toUpperCase();
+  document.getElementById("demo").innerHTML = res;
+}
+</pre>
+
+<pre lang="JavaScript">function palin()
+{
+var a,no,b,temp=0;
+
+no=Number(document.getElementById("no_input").value);
+
+b=no;
+while(no>0)
+{
+a=no%10;
+no=parseInt(no/10);
+temp=temp*10+a;
+}
+alert(temp);
+}</pre>
+
+<pre lang="Java">    class Condition {
+      public static void main(String[] args) {
+        boolean learning = true;
+     
+        if (learning) {
+          System.out.println("Java programmer");
+        }
+        else {
+          System.out.println("What are you doing here?");
+        }
+      }
+    }</pre>
+
+<pre lang="Swift"></pre>
+
+<pre lang="cpp">    #include <iostream>
+     
+    using namespace std;
+     
+    class Mathematics {
+      int x, y;
+     
+    public:
+      void input() {
+        cout << "Input two integers\n";
+        cin >> x >> y;
+      }
+     
+      void add() {
+        cout << "Result: " << x + y;
+      }
+     
+    };
+     
+    int main()
+    {
+       Mathematics m; // Creating an object of the class
+     
+       m.input();
+       m.add();
+     
+       return 0;
+    }</pre>
+
+<pre lang="Swift">import UIKit
+
+@IBDesignable public class CheckBox: UIControl {
+    // MARK: Properties
+    
+    @IBInspectable public var isChecked: Bool {
+        get {
+            return checkBoxLayer.isChecked
+        }
+        
+        set {
+            checkBoxLayer.isChecked = newValue
+        }
+    }
+
+    @IBInspectable public var strokeFactor: CGFloat {
+        set {
+            checkBoxLayer.strokeFactor = newValue
+        }
+
+        get {
+            return checkBoxLayer.strokeFactor
+        }
+    }
+    
+    @IBInspectable public var insetFactor: CGFloat {
+        set {
+            checkBoxLayer.insetFactor = newValue
+        }
+
+        get {
+            return checkBoxLayer.insetFactor
+        }
+    }
+    
+    @IBInspectable public var markInsetFactor: CGFloat {
+        set {
+            checkBoxLayer.markInsetFactor = newValue
+        }
+    
+        get {
+            return checkBoxLayer.markInsetFactor
+        }
+    }
+    
+    // MARK: Overrides
+    
+    override public func didMoveToWindow() {
+        if let window = window {
+            contentScaleFactor = window.screen.scale
+        }
+    }
+
+    override public class func layerClass() -> AnyClass {
+        return CheckBoxLayer.self
+    }
+    
+    override public func tintColorDidChange() {
+        super.tintColorDidChange()
+        
+        checkBoxLayer.tintColor = tintColor.CGColor
+    }
+
+    // MARK: Convenience
+    
+    var checkBoxLayer: CheckBoxLayer {
+        return layer as! CheckBoxLayer
+    }
+}</pre>
+
+<pre lang="JavaScript">function add(){
+var a,b,c;
+a=Number(document.getElementById("first").value);
+b=Number(document.getElementById("second").value);
+c= a + b;
+document.getElementById("answer").value= c;
+}</pre>
+
+<pre lang="Swift">import Lister
+import ListerKit
+import UIKit
+import XCTest
+
+class AppLaunchContextTests: XCTestCase {
+    // MARK: Types
+    
+    struct UserActivity {
+        static let testing = "com.example.apple-samplecode.Lister.testing"
+    }
+    
+    // MARK: Properties
+    
+    var listURLs = [NSURL]()
+    
+    var color = List.Color.Blue
+    
+    // MARK: Setup
+    
+    override func setUp() {
+        super.setUp()
+        
+        listURLs = NSBundle.mainBundle().URLsForResourcesWithExtension(AppConfiguration.listerFileExtension, subdirectory: "") ?? []
+    }
+    
+    // MARK: Initializers
+    
+    func testUserActivityInitializerWithNSUserActivityDocumentURLKey() {
+        let userActivity = NSUserActivity(activityType: UserActivity.testing)
+        
+        userActivity.addUserInfoEntriesFromDictionary([
+            NSUserActivityDocumentURLKey: listURLs.first!,
+            AppConfiguration.UserActivity.listColorUserInfoKey: color.rawValue
+        ])
+        
+        let listsController = AppConfiguration.sharedConfiguration.listsControllerForCurrentConfigurationWithPathExtension(AppConfiguration.listerFileExtension, firstQueryHandler: nil)
+        let possibleLaunchContext = AppLaunchContext(userActivity: userActivity, listsController: listsController)
+        
+        XCTAssertNotNil(possibleLaunchContext)
+        
+        guard let launchContext = possibleLaunchContext else { return }
+        
+        XCTAssertEqual(launchContext.listURL.absoluteURL, listURLs.first!.absoluteURL)
+        XCTAssertEqual(launchContext.listColor, color)
+    }
+    
+    func testUserActivityInitializerWithAppConfigurationUserActivitylistURLPathUserInfoKey() {
+        let userActivity = NSUserActivity(activityType: UserActivity.testing)
+        
+        userActivity.addUserInfoEntriesFromDictionary([
+            AppConfiguration.UserActivity.listURLPathUserInfoKey: listURLs.first!.path!,
+            AppConfiguration.UserActivity.listColorUserInfoKey: color.rawValue
+            ])
+        
+        let listsController = AppConfiguration.sharedConfiguration.listsControllerForCurrentConfigurationWithPathExtension(AppConfiguration.listerFileExtension, firstQueryHandler: nil)
+        let possibleLaunchContext = AppLaunchContext(userActivity: userActivity, listsController: listsController)
+        
+        XCTAssertNotNil(possibleLaunchContext)
+        
+        guard let launchContext = possibleLaunchContext else { return }
+        
+        XCTAssertEqual(launchContext.listURL.absoluteURL, listURLs.first!.absoluteURL)
+        XCTAssertEqual(launchContext.listColor, color)
+    }
+    
+    func testUserActivityInitializerPrefersNSUserActivityDocumentURLKey() {
+        let userActivity = NSUserActivity(activityType: UserActivity.testing)
+        
+        userActivity.addUserInfoEntriesFromDictionary([
+            NSUserActivityDocumentURLKey: listURLs.first!,
+            AppConfiguration.UserActivity.listURLPathUserInfoKey: listURLs.last!.path!,
+            AppConfiguration.UserActivity.listColorUserInfoKey: color.rawValue
+            ])
+        
+        let listsController = AppConfiguration.sharedConfiguration.listsControllerForCurrentConfigurationWithPathExtension(AppConfiguration.listerFileExtension, firstQueryHandler: nil)
+        let possibleLaunchContext = AppLaunchContext(userActivity: userActivity, listsController: listsController)
+        
+        XCTAssertNotNil(possibleLaunchContext)
+        
+        guard let launchContext = possibleLaunchContext else { return }
+        
+        XCTAssertEqual(launchContext.listURL.absoluteURL, listURLs.first!.absoluteURL)
+        XCTAssertEqual(launchContext.listColor, color)
+    }
+    
+    func testListerURLSchemeInitializer() {
+        // Construct a URL with the lister scheme and the file path of the document.
+        let urlComponents = NSURLComponents()
+        urlComponents.scheme = AppConfiguration.ListerScheme.name
+        urlComponents.path = listURLs.first!.path!
+        
+        // Add a query item to encode the color associated with the list.
+        let colorQueryValue = "\(color.rawValue)"
+        let colorQueryItem = NSURLQueryItem(name: AppConfiguration.ListerScheme.colorQueryKey, value: colorQueryValue)
+        urlComponents.queryItems = [colorQueryItem]
+        
+        let possibleLaunchContext = AppLaunchContext(listerURL: urlComponents.URL!)
+        
+        XCTAssertNotNil(possibleLaunchContext)
+        
+        guard let launchContext = possibleLaunchContext else { return }
+        
+        XCTAssertEqual(launchContext.listURL.absoluteURL, listURLs.first!.absoluteURL)
+        XCTAssertEqual(launchContext.listColor, color)
+    }
+}</pre>
