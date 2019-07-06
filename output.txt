@@ -1,0 +1,85 @@
+Model Name: LinearSVC
+Train time:  0.0
+Predict time:  0.0
+Model Accuracy: 0.3000
+
+              precision    recall  f1-score   support
+
+           0     0.0000    0.0000    0.0000         3
+           1     1.0000    0.6667    0.8000         3
+           2     0.0000    0.0000    0.0000         3
+           3     0.1250    1.0000    0.2222         1
+
+    accuracy                         0.3000        10
+   macro avg     0.2812    0.4167    0.2556        10
+weighted avg     0.3125    0.3000    0.2622        10
+
+=======================================================
+Model Name: LogisticRegression
+Train time:  0.0
+Predict time:  0.0
+Model Accuracy: 0.2000
+
+              precision    recall  f1-score   support
+
+           0     0.0000    0.0000    0.0000         3
+           1     1.0000    0.3333    0.5000         3
+           2     0.0000    0.0000    0.0000         3
+           3     0.1111    1.0000    0.2000         1
+
+    accuracy                         0.2000        10
+   macro avg     0.2778    0.3333    0.1750        10
+weighted avg     0.3111    0.2000    0.1700        10
+
+=======================================================
+Model Name: RandomForestClassifier
+Train time:  0.01
+Predict time:  0.0
+Model Accuracy: 0.2000
+
+              precision    recall  f1-score   support
+
+           0     0.0000    0.0000    0.0000         3
+           1     1.0000    0.3333    0.5000         3
+           2     0.0000    0.0000    0.0000         3
+           3     0.1111    1.0000    0.2000         1
+
+    accuracy                         0.2000        10
+   macro avg     0.2778    0.3333    0.1750        10
+weighted avg     0.3111    0.2000    0.1700        10
+
+=======================================================
+Model Name: DecisionTreeClassifier
+Train time:  0.0
+Predict time:  0.0
+Model Accuracy: 0.4000
+
+              precision    recall  f1-score   support
+
+           0     0.0000    0.0000    0.0000         3
+           1     0.3750    1.0000    0.5455         3
+           2     0.0000    0.0000    0.0000         3
+           3     0.5000    1.0000    0.6667         1
+
+    accuracy                         0.4000        10
+   macro avg     0.2188    0.5000    0.3030        10
+weighted avg     0.1625    0.4000    0.2303        10
+
+=======================================================
+Model Name: MultinomialNB
+Train time:  0.0
+Predict time:  0.0
+Model Accuracy: 0.2000
+
+              precision    recall  f1-score   support
+
+           0     0.0000    0.0000    0.0000         3
+           1     1.0000    0.3333    0.5000         3
+           2     0.0000    0.0000    0.0000         3
+           3     0.1111    1.0000    0.2000         1
+
+    accuracy                         0.2000        10
+   macro avg     0.2778    0.3333    0.1750        10
+weighted avg     0.3111    0.2000    0.1700        10
+
+=======================================================
