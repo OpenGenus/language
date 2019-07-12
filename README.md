@@ -18,7 +18,7 @@ The language used is Python3
 
 ### To run through CLI
 ```sh
-   predict_language.ipynb
+   python predict_language.ipynb
 ```
 You can also use *Google Colab*.
 
