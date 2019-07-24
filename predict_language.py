@@ -27,11 +27,13 @@ from sklearn.utils import shuffle
 from sklearn.metrics import precision_score, classification_report, accuracy_score
 from sklearn.pipeline import FeatureUnion
 
-"""**Data Preparation**"""
+import sys
 
+"""**Data Preparation**"""
 # load data
 def load_data():
-    file_name = './sampleCode.txt' # input code file
+#     file_name = './sampleCode.txt' # input code file
+    file_name = sys.argv[1]
     data = open(file_name, 'r')
     lines = data.readlines()
     return lines
