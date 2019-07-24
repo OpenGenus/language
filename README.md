@@ -22,3 +22,5 @@ The language used is Python3
 ```
 You can also use *Google Colab*.
 
+#### Here is how our ouput file would look like
+![languageOutput](https://user-images.githubusercontent.com/25251763/61788523-e6c6e080-ae2f-11e9-94d0-b1bff7606886.png)
